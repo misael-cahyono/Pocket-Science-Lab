@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2563eb">
+  <title>Lab Biologi 3D - LabPocket</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Memuat pustaka Three.js dari CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body class="lab-page">
+
+  <!-- Navigasi Atas -->
+  <header class="lab-header">
+    <a href="index.html" class="back-btn">← Kembali</a>
+    <h1>🧬 Lab Biologi: Struktur Sel 3D</h1>
+  </header>
+
+  <!-- Area Tampilan Simulasi 3D (Canvas) -->
+  <main class="simulation-container">
+    <div id="canvas-container">
+      <!-- Three.js akan merender model sel 3D di sini -->
+    </div>
+
+    <!-- Panel Informasi & Kontrol Organel Sel -->
+    <div class="control-panel">
+      <h3>Pilih Bagian Sel</h3>
+      
+      <div class="control-group">
+        <label for="organelleSelect">Organel Sel:</label>
+        <select id="organelleSelect" class="select-dropdown">
+          <option value="nucleus">Nukleus (Inti Sel)</option>
+          <option value="mitochondria">Mitokondria</option>
+          <option value="membrane">Membran Sel</option>
+        </select>
+      </div>
+
+      <div class="info-box">
+        <p><strong>Fungsi:</strong> <span id="organelleDesc">Nukleus berfungsi mengatur seluruh aktivitas sel dan menyimpan materi genetik (DNA).</span></p>
+      </div>
+
+      <div class="button-group">
+        <button id="highlightBtn" class="btn primary">Sorot Organel</button>
+        <button id="saveBioBtn" class="btn secondary">Simpan ke Catatan</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Menghubungkan logika khusus biologi -->
+  <script src="js/biology.js"></script>
+</body>
+</html>
