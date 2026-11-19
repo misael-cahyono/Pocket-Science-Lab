@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2563eb">
+  <title>Catatan Lab - LabPocket</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="lab-page">
+
+  <!-- Navigasi Atas -->
+  <header class="lab-header">
+    <a href="index.html" class="back-btn">← Kembali</a>
+    <h1>📝 Catatan Praktikum Lab</h1>
+  </header>
+
+  <!-- Konten Utama Halaman Catatan -->
+  <main class="simulation-container" style="flex-direction: column; padding: 20px; overflow-y: auto;">
+    
+    <!-- Form untuk Menambah Catatan Baru -->
+    <div class="control-panel" style="margin-bottom: 20px;">
+      <h3>Buat Catatan Baru</h3>
+      
+      <div class="control-group">
+        <label for="noteTitle">Judul / Topik Praktikum:</label>
+        <input type="text" id="noteTitle" placeholder="Contoh: Percobaan Bandul Fisika" class="input-text" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;">
+      </div>
+
+      <div class="control-group">
+        <label for="noteContent">Hasil Pengamatan & Kesimpulan:</label>
+        <textarea id="noteContent" rows="4" placeholder="Tuliskan hasil pengamatanmu di sini..." class="input-textarea" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;"></textarea>
+      </div>
+
+      <button id="saveNoteBtn" class="btn primary" style="width: 100%;">Simpan ke Memori HP</button>
+    </div>
+
+    <!-- Daftar Catatan yang Tersimpan -->
+    <div class="control-panel">
+      <h3>Daftar Catatan Tersimpan</h3>
+      <div id="notesList" class="notes-container">
+        <!-- Catatan dari localStorage akan dimunculkan di sini secara otomatis oleh JavaScript -->
+        <p class="empty-notes" style="color: #666; font-style: italic;">Belum ada catatan yang tersimpan.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Menghubungkan file logika untuk penyimpanan localStorage -->
+  <script src="js/notes.js"></script>
+</body>
+</html>
