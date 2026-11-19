@@ -1,0 +1,267 @@
+/* --- Pengaturan Dasar (Reset & Variabel Warna) --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- Tampilan Halaman Utama (index.html) --- */
+.app-header {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  padding: 24px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.app-header p {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.container {
+  padding: 20px;
+  flex: 1;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.intro {
+  margin-bottom: 20px;
+}
+
+.intro h2 {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.intro p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* --- Grid Kartu Menu Lab --- */
+.lab-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lab-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #e2e8f0;
+}
+
+.lab-card:active {
+  transform: scale(0.98);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-right: 16px;
+  background: #eff6ff;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.card-info h3 {
+  font-size: 1.1rem;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.card-info p {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* --- Tampilan Halaman Simulasi Lab (physics, chemistry, biology, notes) --- */
+.lab-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.lab-header {
+  background: #1e293b;
+  color: white;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lab-header h1 {
+  font-size: 1rem;
+}
+
+.back-btn {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.simulation-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #000;
+}
+
+#canvas-container {
+  flex: 1;
+  width: 100%;
+  position: relative;
+}
+
+/* --- Panel Kontrol di Bawah Simulasi --- */
+.control-panel {
+  background: white;
+  padding: 16px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  max-height: 45vh;
+  overflow-y: auto;
+}
+
+.control-panel h3 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+.control-group {
+  margin-bottom: 12px;
+}
+
+.control-group label {
+  display: block;
+  font-size: 0.85rem;
+  color: #475569;
+  margin-bottom: 4px;
+}
+
+.control-group input[type="range"] {
+  width: 100%;
+}
+
+.select-dropdown, .input-text, .input-textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.select-dropdown:focus, .input-text:focus, .input-textarea:focus {
+  border-color: #2563eb;
+}
+
+.info-box {
+  background: #f1f5f9;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #334155;
+  margin-bottom: 12px;
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn.primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn.secondary {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+
+.btn-install {
+  background: white;
+  color: #2563eb;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+/* --- Footer & Navigasi Bawah --- */
+.bottom-nav {
+  text-align: center;
+  padding: 12px;
+  font-size: 0.75rem;
+  color: #64748b;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* --- Tampilan Daftar Catatan di notes.html --- */
+.note-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.note-item h4 {
+  font-size: 0.95rem;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.note-item p {
+  font-size: 0.85rem;
+  color: #475569;
+}
