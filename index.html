@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <!-- Meta viewport wajib agar tampilan pas di layar HP -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Warna bar status di bagian atas browser HP -->
+  <meta name="theme-color" content="#2563eb">
+  
+  <title>LabPocket - Simulasi Sains 3D</title>
+  
+  <!-- Menghubungkan file manifest agar website bisa di-install ke layar utama HP -->
+  <link rel="manifest" href="manifest.json">
+  
+  <!-- Ikon untuk layar utama iOS/Apple -->
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  
+  <!-- Menghubungkan file desain CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Bagian Atas / Header Aplikasi -->
+  <header class="app-header">
+    <div class="header-content">
+      <h1>🔬 LabPocket</h1>
+      <p>Laboratorium Sains 3D di Sakumu</p>
+    </div>
+    <!-- Tombol instalasi PWA (muncul otomatis jika browser mendukung) -->
+    <button id="installBtn" class="btn-install" style="display: none;">
+      📲 Install App
+    </button>
+  </header>
+
+  <!-- Konten Utama: Daftar Pilihan Laboratorium -->
+  <main class="container">
+    <section class="intro">
+      <h2>Pilih Ruang Praktikum</h2>
+      <p>Sentuh salah satu kartu di bawah untuk memulai simulasi interaktif 3D.</p>
+    </section>
+
+    <!-- Grid Menu Lab -->
+    <div class="lab-grid">
+      
+      <!-- Kartu 1: Lab Fisika -->
+      <a href="physics.html" class="lab-card physics">
+        <div class="card-icon">⚛️</div>
+        <div class="card-info">
+          <h3>Lab Fisika</h3>
+          <p>Simulasi Ayunan Bandul & Gravitasi 3D</p>
+        </div>
+      </a>
+
+      <!-- Kartu 2: Lab Kimia -->
+      <a href="chemistry.html" class="lab-card chemistry">
+        <div class="card-icon">🧪</div>
+        <div class="card-info">
+          <h3>Lab Kimia</h3>
+          <p>Visualisasi Bentuk Molekul 3D</p>
+        </div>
+      </a>
+
+      <!-- Kartu 3: Lab Biologi -->
+      <a href="biology.html" class="lab-card biology">
+        <div class="card-icon">🧬</div>
+        <div class="card-info">
+          <h3>Lab Biologi</h3>
+          <p>Eksplorasi Struktur Sel 3D</p>
+        </div>
+      </a>
+
+      <!-- Kartu 4: Catatan Praktikum (LocalStorage) -->
+      <a href="notes.html" class="lab-card notes">
+        <div class="card-icon">📝</div>
+        <div class="card-info">
+          <h3>Catatan Lab</h3>
+          <p>Simpan hasil pengamatan di memori HP</p>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <!-- Navigasi Bawah ala Aplikasi Mobile -->
+  <footer class="bottom-nav">
+    <p>Proyek Praktikum SMA &bull; Mode Offline Siap</p>
+  </footer>
+
+  <!-- Menghubungkan file JavaScript utama -->
+  <script src="js/app.js"></script>
+</body>
+</html>
