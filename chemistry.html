@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2563eb">
+  <title>Lab Kimia 3D - LabPocket</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Memuat pustaka Three.js dari CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body class="lab-page">
+
+  <!-- Navigasi Atas -->
+  <header class="lab-header">
+    <a href="index.html" class="back-btn">← Kembali</a>
+    <h1>🧪 Lab Kimia: Molekul 3D</h1>
+  </header>
+
+  <!-- Area Tampilan Simulasi 3D (Canvas) -->
+  <main class="simulation-container">
+    <div id="canvas-container">
+      <!-- Three.js akan merender objek molekul 3D di sini -->
+    </div>
+
+    <!-- Panel Informasi & Kontrol Molekul -->
+    <div class="control-panel">
+      <h3>Pilih Senyawa Molekul</h3>
+      
+      <div class="control-group">
+        <label for="moleculeSelect">Jenis Molekul:</label>
+        <select id="moleculeSelect" class="select-dropdown">
+          <option value="h2o">Air ($H_2O$)</option>
+          <option value="co2">Karbon Dioksida ($CO_2$)</option>
+          <option value="ch4">Metana ($CH_4$)</option>
+        </select>
+      </div>
+
+      <div class="info-box">
+        <p><strong>Deskripsi:</strong> <span id="molDesc">Molekul air terdiri dari 2 atom Hidrogen dan 1 atom Oksigen dengan ikatan kovalen.</span></p>
+      </div>
+
+      <div class="button-group">
+        <button id="rotateBtn" class="btn primary">Putar Otomatis</button>
+        <button id="saveChemBtn" class="btn secondary">Simpan ke Catatan</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Menghubungkan logika khusus kimia -->
+  <script src="js/chemistry.js"></script>
+</body>
+</html>
